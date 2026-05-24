@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Viridian Known Issues</title>
+<meta name="description" content="Known fixes for common Viridian Tweaks software issues. Check this before opening a support ticket.">
+<meta property="og:title" content="Viridian Known Issues">
+<meta property="og:description" content="Fix common setup, runtime, time-sync, and Windows security issues before opening a ticket.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://knownissues.viridiantweaks.com/knownissues/">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" type="image/x-icon" href="assets/ViridianLOGOIcon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=8">
+</head>
+<body class="security-lock">
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <section id="security-gate" class="security-gate" aria-live="polite" aria-label="Checking your connection">
+    <div class="security-bg" aria-hidden="true"></div>
+    <div class="security-panel">
+      <div class="security-orbit" aria-hidden="true">
+        <div class="security-badge"><img src="assets/ViridianLOGOIcon.ico" alt=""></div>
+      </div>
+      <div class="security-kicker"><span class="security-dot"></span> Viridian support library</div>
+      <h1 class="security-title">Checking your session</h1>
+      <p class="security-copy">Preparing the known issues page for your browser.</p>
+      <div class="security-check-card">
+        <div class="security-spinner" aria-hidden="true"></div>
+        <div class="security-check-text">
+          <span id="security-status">Verifying browser integrity...</span>
+          <span id="security-substatus">This should only take a moment.</span>
+        </div>
+        <div class="security-mini-mark" aria-hidden="true">VT</div>
+      </div>
+      <div class="security-progress" aria-hidden="true"><span id="security-progress-bar"></span></div>
+    </div>
+  </section>
+
+  <div class="topbar-wrap">
+    <header class="topbar">
+      <a class="brand" href="https://vtweaks.com/" aria-label="Viridian Tweaks">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Viridian Tweaks</span>
+      </a>
+      <nav class="topnav" aria-label="Main">
+        <a href="https://vtweaks.com/">Home</a>
+        <a href="https://vtweaks.com/#products">Products</a>
+        <a href="https://vtweaks.com/#reviews">Reviews</a>
+        <a href="https://download.viridiantweaks.com/download">Downloads</a>
+        <a href="https://discord.gg/optimize" class="nav-discord">Discord</a>
+      </nav>
+      <div class="topbar-right">
+        <a class="btn-account" href="https://vtweaks.com/b-account">Account</a>
+        <a class="btn-purchase" href="https://vtweaks.com/#products">Purchase Now</a>
+      </div>
+    </header>
+  </div>
+
+  <main class="page">
+    <section class="hero-wrap">
+      <span class="pill"><span class="pill-dot"></span> Support before tickets</span>
+      <h1 class="hero">Known <span class="hero-muted">Issues.</span></h1>
+      <p class="lede">
+        Most issues here are caused by Windows setup, missing runtimes, browser/ISP routing, or security tools on your PC.
+        Search your error or pick a category below before creating a ticket.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://download.viridiantweaks.com/download">Download your software</a>
+        <a class="btn-secondary" href="https://discord.gg/optimize">Open Discord</a>
+      </div>
+    </section>
+
+    <section class="notice notice-red">
+      <div class="notice-icon">!</div>
+      <div>
+        <h2>Important before opening a ticket</h2>
+        <p>
+          If your browser, Windows Security, or a third-party antivirus flags or deletes the app, check your security software first.
+          Only use files from the official download page. If you do not know which setting blocked the download or install, ask AI or search your security product's guide before opening a ticket.
+        </p>
+      </div>
+    </section>
+
+    <section class="tools">
+      <div class="tools-row">
+        <label class="search">
+          <span>Search known issues</span>
+          <input id="issue-search" type="search" placeholder="Type any error code, symptom, or keyword — e.g. timestamp, code 740, white screen, NXDOMAIN, WebView2, antivirus" autocomplete="off">
+          <span id="search-count" class="search-count"></span>
+        </label>
+        <div class="filter-chips" role="tablist" aria-label="Filter by category">
+          <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="connection" role="tab">Connection / Download</button>
+          <button class="chip" data-filter="install" role="tab">Install / Update</button>
+          <button class="chip" data-filter="runtime" role="tab">Runtime / Crash</button>
+          <button class="chip" data-filter="security" role="tab">Security / Antivirus</button>
+          <button class="chip" data-filter="license" role="tab">License / Key</button>
+        </div>
+      </div>
+      <div class="quick-downloads" aria-label="Quick downloads">
+        <span class="quick-downloads-label">Quick downloads</span>
+        <div class="quick-downloads-row">
+          <a class="quick-link" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">
+            <span class="quick-link-icon" aria-hidden="true">⇓</span>
+            <span class="quick-link-text"><b>Visual C++ x64</b><small>Microsoft Runtime</small></span>
+          </a>
+          <a class="quick-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">
+            <span class="quick-link-icon" aria-hidden="true">⇓</span>
+            <span class="quick-link-text"><b>WebView2 Runtime</b><small>Microsoft Evergreen</small></span>
+          </a>
+          <a class="quick-link" href="https://download.viridiantweaks.com/download">
+            <span class="quick-link-icon" aria-hidden="true">→</span>
+            <span class="quick-link-text"><b>Software downloads</b><small>Official Viridian page</small></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <p id="no-results" class="no-results" hidden>No issues matched your search. Try a shorter keyword, or open a Discord ticket.</p>
+
+    <section class="issues" id="issues">
+
+      <!-- ===================== CONNECTION / DOWNLOAD ===================== -->
+
+      <article class="issue-card" data-category="connection" data-keywords="ERR_CONNECTION_TIMED_OUT connection timed out cant reach this page download page wont load isp blocked cloudflare blocked download.viridiantweaks.com took too long to respond hmmm cant reach this page chrome edge firefox brave opera download website not loading proxy firewall">
+        <div class="issue-head">
+          <span class="issue-tag connection">Connection</span>
+          <h2>Download page won't load — <code>ERR_CONNECTION_TIMED_OUT</code></h2>
+          <p>If the download page says "Hmmm... can't reach this page" or "took too long to respond" in every browser, your ISP or local network can't reach Cloudflare (where the page is hosted). The site is up — this is local routing.</p>
+        </div>
+        <ol class="steps compact">
+          <li><b>Flush DNS cache:</b> press <b>Win + R</b>, type <code>cmd</code>, run: <code>ipconfig /flushdns</code></li>
+          <li><b>Change DNS to Cloudflare (fixes ~95% of cases):</b> Win + R → <code>ncpa.cpl</code> → right-click your active connection → Properties → <b>Internet Protocol Version 4 (TCP/IPv4)</b> → Properties → "Use the following DNS server addresses":
+            <ul><li>Preferred: <code>1.1.1.1</code></li><li>Alternate: <code>1.0.0.1</code></li></ul>
+            Click OK, open a fresh browser, try the link again.</li>
+          <li>If still failing — try your <b>phone's mobile hotspot</b>. If it works there, your home ISP is the problem; keep Cloudflare DNS.</li>
+          <li>Last resort: any free VPN (ProtonVPN, Cloudflare WARP) connected to a US server.</li>
+        </ol>
+        <p class="support-note">Once the download is done, you can switch DNS back to "Obtain automatically" if your ping got worse. The DNS change only affects website lookups, not gameplay — but reverting it is fine.</p>
+      </article>
+
+      <article class="issue-card" data-category="connection" data-keywords="DNS_PROBE_FINISHED_NXDOMAIN nxdomain dns probe finished domain does not exist no se puede acceder a este sitio site does not exist check the spelling cant access download.viridiantweaks.com revisa que no haya errores propagation dns cache stale">
+        <div class="issue-head">
+          <span class="issue-tag connection">Connection</span>
+          <h2>Download page says <code>DNS_PROBE_FINISHED_NXDOMAIN</code></h2>
+          <p>This means your DNS resolver cannot look up <code>download.viridiantweaks.com</code> — even though it exists and works worldwide. Most often it's a stale cache or slow ISP DNS server.</p>
+        </div>
+        <ol class="steps compact">
+          <li>Press <b>Win + R</b>, type <code>cmd</code>, run: <code>ipconfig /flushdns</code></li>
+          <li>Restart your browser fully (close all windows).</li>
+          <li>Still failing? Change your DNS to <code>1.1.1.1</code> and <code>1.0.0.1</code> (Cloudflare) — see the steps in the "ERR_CONNECTION_TIMED_OUT" issue above.</li>
+          <li>Try again after a few minutes — sometimes it's a propagation delay that resolves itself.</li>
+        </ol>
+      </article>
+
+      
+      <article class="issue-card" data-category="connection license" data-keywords="download session expired session expired download page expired link expired session timeout download wont start cant download timed out validation session timed out license key discord connect again restart download flow re-enter key discord login again">
+        <div class="issue-head">
+          <span class="issue-tag connection">Download</span>
+          <h2>"Download session expired" on the download page</h2>
+          <p>Your download session timed out because too much time passed between entering your license key, connecting Discord, and clicking download. It is harmless — you just need to start the flow once more.</p>
+        </div>
+        <div class="issue-grid">
+          <div>
+            <ol class="steps compact">
+              <li>Go back to <a href="https://download.viridiantweaks.com/download">download.viridiantweaks.com/download</a> in your browser (open a fresh tab).</li>
+              <li>Enter your <b>license key</b> again.</li>
+              <li>Click <b>Connect Discord</b> and finish the Discord login.</li>
+              <li>Click <b>Download</b> — your session is fresh again and the file will start downloading.</li>
+            </ol>
+            <p class="support-note">Tip: try not to wait too long between the steps. If you get interrupted (phone, AFK, etc.) just restart the flow — sessions are short on purpose so old links can not be reused by someone else.</p>
+          </div>
+          <figure class="issue-image">
+            <img src="assets/image-session-expired.png" alt="Download session expired error">
+          </figure>
+        </div>
+      </article>
+
+      <!-- data-keywords-marker-session-expired -->
+
+      <!-- ===================== INSTALL / UPDATE ===================== -->
+
+      <article class="issue-card" data-category="install" data-keywords="macro update stuck old version installing not installing v1.0.33 1.0.33 1.0.34 1.0.35 1.0.36 1.0.37 version did not change update downloads but version stays same macro update not installing nsis installer failed update loop downloading update locked files file in use stuck on old version after update version bottom right corner">
+        <div class="issue-head">
+          <span class="issue-tag install">Install / Update</span>
+          <h2>Macro updates download, but version stays the same (stuck on old version)</h2>
+          <p>If after an update your version in the bottom-right corner still shows the old number (e.g. 1.0.33), the installer was unable to overwrite the running files. Fixed in 1.0.37+. If you're below 1.0.37, you'll need one manual reinstall to get the fix.</p>
+        </div>
+        <ol class="steps compact">
+          <li>Fully close the Macro (also check system tray near the clock — right-click → Exit).</li>
+          <li>Open <b>Apps &amp; Features</b> in Windows, find <b>Viridian Macro</b>, click <b>Uninstall</b>.</li>
+          <li>Download the latest installer from the official download page.</li>
+          <li>Install — version should now show <code>1.0.37</code> or higher.</li>
+          <li>After this one-time reinstall, every future update will install automatically.</li>
+        </ol>
+        <div class="download-row">
+          <a class="inline-download" href="https://download.viridiantweaks.com/download">Download latest Macro</a>
+        </div>
+        <p class="support-note">If you keep seeing the same old version after a clean reinstall, an antivirus may be deleting the new files mid-install. Check your antivirus quarantine first.</p>
+      </article>
+
+      <article class="issue-card featured" data-category="install" data-keywords="tweaks stuck on v1.0.0 1.0.0 old ui appears after reinstall viridiantweaks localappdata ui folder legacy version wont change tweaks old version still showing reset pc still old version recycle bin program files">
+        <div class="issue-head">
+          <span class="issue-tag install">Install / Update</span>
+          <h2>Tweaks stuck on V1.0.0 even after reinstall</h2>
+          <p>The app finds an old leftover UI folder in your Windows AppData and loads it instead of the freshly installed one. Resetting your PC does <b>not</b> help unless you chose "Remove everything" — "Keep my files" leaves AppData intact.</p>
+        </div>
+        <ol class="steps compact">
+          <li>Make sure Viridian Tweaks is fully closed (also check the system tray).</li>
+          <li>Press <b>Win + R</b>, type <code>%LOCALAPPDATA%</code>, press Enter.</li>
+          <li>Find the folder called <b>ViridianTweaks</b> and <b>delete it completely</b>.</li>
+          <li>Reinstall from the official download page — the latest version will now load.</li>
+        </ol>
+        <pre class="console path-console" data-title="Folder to delete"><button class="copy-btn" data-copy="%LOCALAPPDATA%\ViridianTweaks">Copy</button><code>%LOCALAPPDATA%\ViridianTweaks</code></pre>
+        <p class="support-note">That folder is the <b>only</b> place the app stores its data — nowhere else on your system. So a Windows reset only fixes this if you wiped AppData too.</p>
+      </article>
+
+      <article class="issue-card featured" data-category="install security" data-keywords="error code 2 antivirus defender missing files viridiantweaks localappdata after install blocked files app wont start install failed">
+        <div class="issue-head">
+          <span class="issue-tag danger">Error code 2</span>
+          <h2>Error code 2 or app files blocked after install</h2>
+          <p>These problems are almost always caused by security software deleting or blocking important files during or after installation.</p>
+        </div>
+        <div class="issue-grid">
+          <div>
+            <ol class="steps compact">
+              <li>Uninstall the software first.</li>
+              <li>Delete leftover folders if they exist.</li>
+              <li>Restart your PC.</li>
+              <li>Install Visual C++ Runtime x64.</li>
+              <li>Reinstall from the official download page.</li>
+            </ol>
+            <p class="mini-title">Common leftover paths:</p>
+            <pre class="console path-console" data-title="Folders to delete if they exist"><button class="copy-btn" data-copy="C:\Program Files\ViridianTweaks\&#10;%localappdata%\ViridianTweaks\">Copy</button><code>C:\Program Files\ViridianTweaks\
+%localappdata%\ViridianTweaks\</code></pre>
+            <p>Replace the username path with your real Windows username if you browse manually. You can open Local AppData by pressing <b>Win + R</b>, typing <b>%localappdata%</b>, and pressing Enter.</p>
+            <div class="download-row">
+              <a class="inline-download" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Download Visual C++ x64</a>
+              <a class="inline-download ghost" href="https://download.viridiantweaks.com/download">Reinstall software</a>
+            </div>
+          </div>
+          <figure class="issue-image">
+            <img src="assets/image-error-2.png" alt="Error code 2 screenshot">
+          </figure>
+        </div>
+      </article>
+
+      <!-- ===================== RUNTIME / CRASH ===================== -->
+
+      <article class="issue-card featured" data-category="runtime" data-keywords="invalid request timestamp time sync w32tm date clock wrong time auth fails login error">
+        <div class="issue-head">
+          <span class="issue-tag runtime">Runtime</span>
+          <h2>Invalid request timestamp</h2>
+          <p>Got this error? Your Windows clock is probably out of sync. Try these steps before creating a ticket.</p>
+        </div>
+        <div class="issue-grid">
+          <div>
+            <ol class="steps">
+              <li>Open CMD as Administrator. Press <b>Win + S</b>, search for <b>CMD</b>, right-click it, then choose <b>Run as administrator</b>.</li>
+              <li>Try this first:</li>
+            </ol>
+            <pre class="console cmd-console" data-title="CMD as Administrator"><button class="copy-btn" data-copy="w32tm /resync /force">Copy</button><code>w32tm /resync /force</code></pre>
+            <p class="mini-title">If that did not work, run these one by one:</p>
+            <pre class="console cmd-console" data-title="CMD as Administrator"><button class="copy-btn" data-copy="net stop w32time&#10;w32tm /unregister&#10;w32tm /register&#10;net start w32time&#10;w32tm /resync /force">Copy</button><code>net stop w32time
+w32tm /unregister
+w32tm /register
+net start w32time
+w32tm /resync /force</code></pre>
+            <p>Restart your PC, then launch the app again. Also check <b>Settings -> Time &amp; Language -> Date &amp; Time</b> and enable <b>Set time automatically</b>.</p>
+          </div>
+          <figure class="issue-image">
+            <img src="assets/image-request-timestamp.png" alt="Invalid request timestamp error screenshot">
+          </figure>
+        </div>
+      </article>
+
+      
+      <article class="issue-card" data-category="runtime install" data-keywords="msvcp140 msvcp140.dll msvcr140 msvcr120 vcruntime140 vcruntime140.dll vcruntime msvc dll missing dll not found dll error the code execution cannot proceed because was not found visual c++ runtime missing vc redist vcredist dll fehlt program cant start system error 0xc000007b api-ms-win-crt missing required dll">
+        <div class="issue-head">
+          <span class="issue-tag runtime">Runtime</span>
+          <h2>"MSVCP140.dll" / "VCRUNTIME140.dll" / any MSVC*.dll missing error</h2>
+          <p>If you get an error mentioning a missing <code>.dll</code> file starting with <b>MSVC</b>, <b>VCRUNTIME</b>, or <b>api-ms-win-crt</b>, you just need to install the Microsoft Visual C++ Runtime. Takes 30 seconds.</p>
+        </div>
+        <ol class="steps compact">
+          <li>Download <b>Visual C++ Redistributable x64</b> (the button below).</li>
+          <li>Run <code>vc_redist.x64.exe</code> → click <b>Install</b>.</li>
+          <li>Restart your PC if Windows asks.</li>
+          <li>Launch the Viridian app again — the dll error is gone.</li>
+        </ol>
+        <div class="download-row">
+          <a class="inline-download" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Download Visual C++ x64</a>
+        </div>
+        <p class="support-note">If the installer says "already installed" but the dll error still shows, run the installer again and choose <b>Repair</b>. That fixes broken Visual C++ installs that AV cleanups sometimes leave behind.</p>
+      </article>
+
+      <!-- data-keywords-marker-msvcp-dll -->
+
+      <article class="issue-card" data-category="runtime" data-keywords="visual c++ runtime missing vc redist aimutility tweaks crash dll vcruntime msvcp140 vcredist">
+        <div class="issue-head">
+          <span class="issue-tag runtime">Runtime</span>
+          <h2>Visual C++ Runtime is missing</h2>
+          <p>This can affect AimUtility and Tweaks. Install the Microsoft Visual C++ Redistributable x64, then restart if prompted.</p>
+        </div>
+        <ol class="steps compact">
+          <li>Go to the official Microsoft runtime download.</li>
+          <li>Download <b>vc_redist.x64.exe</b>.</li>
+          <li>Double-click it, click <b>Install</b>, then restart if Windows asks.</li>
+          <li>Launch AimUtility or Tweaks again.</li>
+        </ol>
+        <div class="download-row">
+          <a class="inline-download" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Download Visual C++ x64</a>
+          <a class="inline-download ghost" href="https://download.viridiantweaks.com/download">Open software downloads</a>
+        </div>
+      </article>
+
+      <article class="issue-card" data-category="runtime" data-keywords="crash code license enter webview2 runtime defender winver antivirus app crashes when entering license app crashes after key">
+        <div class="issue-head">
+          <span class="issue-tag runtime">Runtime</span>
+          <h2>App crashes when entering your code or license</h2>
+          <p>Try these in order before creating a ticket.</p>
+        </div>
+        <ol class="steps compact">
+          <li>Install WebView2 Runtime, especially on Windows 10.</li>
+          <li>Install Visual C++ Redistributable 2015-2022 x64.</li>
+          <li>Check Windows Defender or third-party antivirus quarantine/history.</li>
+          <li>Reinstall the app if files were removed.</li>
+        </ol>
+        <div class="download-row">
+          <a class="inline-download" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">Download WebView2</a>
+          <a class="inline-download" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Download Visual C++ x64</a>
+        </div>
+        <p>If it still crashes, send a screenshot of the crash, your Windows version from <b>Win + R -> winver</b>, and the antivirus you use.</p>
+      </article>
+
+      <article class="issue-card" data-category="runtime" data-keywords="windows ltsc server custom debloated webview2 not launching unsupported windows 10 windows 11 supported versions">
+        <div class="issue-head">
+          <span class="issue-tag runtime">Runtime</span>
+          <h2>App not launching on Windows LTSC, Server, or custom Windows builds</h2>
+          <p>Our software is officially supported on Windows 10 21H1+ and Windows 11 Home, Pro, or Education.</p>
+        </div>
+        <div class="support-matrix">
+          <div><b>Supported</b><span>Windows 10 21H1 or newer</span><span>Windows 11 standard editions</span></div>
+          <div><b>Not officially supported</b><span>Windows 10 LTSC / LTSB</span><span>Windows Server</span><span>Heavily debloated Windows installs</span></div>
+        </div>
+        <p>Worth trying first: install WebView2 Evergreen Runtime and Visual C++ Redistributable x64, restart your PC, then launch the app again.</p>
+        <div class="split-actions">
+          <a class="inline-download" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">Download WebView2</a>
+          <a class="inline-download" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Download Visual C++ x64</a>
+        </div>
+      </article>
+
+      
+      <article class="issue-card warning-card" data-category="security connection" data-keywords="malicious download detected download cancelled malware detected virus detected windows defender smartscreen blocked browser blocked download chrome edge firefox brave opera blocked file unsigned executable unknown publisher false positive heuristic detection trojan win32 generic threat blocked smartscreen browser security warning download unsafe">
+        <div class="issue-head">
+          <span class="issue-tag danger">Security tools</span>
+          <h2>Browser / Windows says "Malicious Download Detected" or "Download Cancelled"</h2>
+          <p>This is a known <b>false positive</b> on unsigned Windows software and happens to almost every new indie tool — including ours. The download is safe.</p>
+        </div>
+        <div class="issue-grid">
+          <div>
+            <p>Why this happens: Our installer is <b>not yet code-signed</b> with an expensive Microsoft EV certificate, so browsers and Windows Defender treat any new unsigned executable as suspicious until thousands of users have downloaded it. The file itself is the exact installer we host — and we've been trusted by <b>over 2,000 active community members</b> using it daily.</p>
+            <p class="mini-title">Quick fix:</p>
+            <ol class="steps compact">
+              <li>In your browser's download bar, click <b>"Keep"</b> / <b>"Keep anyway"</b> / <b>"Download anyway"</b>. On Chrome/Edge it may be hidden behind a <b>"..."</b> menu next to the warning.</li>
+              <li>If Windows SmartScreen blocks the installer when you open it, click <b>"More info"</b> → <b>"Run anyway"</b>.</li>
+              <li>If your antivirus quarantines it, restore the file from quarantine and add the install folder as an exclusion before running it.</li>
+              <li>Only ever download from the official page: <a href="https://download.viridiantweaks.com/download">download.viridiantweaks.com/download</a></li>
+            </ol>
+            <p class="support-note">If you're not comfortable doing this, that's totally fair — you can also scan the file on <a href="https://www.virustotal.com/">VirusTotal</a> first. Most flags you'll see are heuristic / "generic" detections that AV vendors apply to every unsigned installer until enough users vouch for it.</p>
+          </div>
+          <figure class="issue-image">
+            <img src="assets/image-malicious-download.png" alt="Malicious Download Detected browser warning">
+          </figure>
+        </div>
+      </article>
+
+      <!-- data-keywords-marker-malicious-download -->
+
+      <!-- ===================== SECURITY / ANTIVIRUS ===================== -->
+
+      <article class="issue-card warning-card" data-category="security" data-keywords="antivirus defender disappearing missing files deleted quarantine security browser flagged blocked download windows security smartscreen">
+        <div class="issue-head">
+          <span class="issue-tag danger">Security tools</span>
+          <h2>Software disappears, files are missing, or the browser blocks the download</h2>
+          <p>
+            This is usually caused by Windows Defender or a third-party antivirus quarantining files during download, install, launch, or after a restart.
+          </p>
+        </div>
+        <ol class="steps compact">
+          <li>Make sure you downloaded only from the official Viridian download page.</li>
+          <li>Check your browser downloads panel and your antivirus quarantine/history.</li>
+          <li>If you trust the official download, restore the blocked file or add the install folder as an exclusion.</li>
+          <li>Reinstall the software after the exclusion is added, because important files may already have been removed.</li>
+        </ol>
+        <p class="support-note">Do not create a ticket only to say that your antivirus blocked the file. Check your local security tools first.</p>
+      </article>
+
+      <article class="issue-card" data-category="security" data-keywords="disappears after restart defender exclusion powershell whitelist add exclusion windows defender bitdefender norton kaspersky avast eset">
+        <div class="issue-head">
+          <span class="issue-tag">Security tools</span>
+          <h2>Software disappears after restart</h2>
+          <p>If Windows Defender removes files after installation, add exclusions for the official install folders, then reinstall.</p>
+        </div>
+        <p class="mini-title">PowerShell as Administrator:</p>
+        <pre class="console powershell-console" data-title="PowerShell as Administrator"><button class="copy-btn" data-copy="Add-MpPreference -ExclusionPath &quot;C:\Program Files\ViridianTweaks&quot;&#10;Add-MpPreference -ExclusionPath &quot;$env:LOCALAPPDATA\ViridianTweaks&quot;&#10;Add-MpPreference -ExclusionProcess &quot;ViridianTweaks.exe&quot;">Copy</button><code>Add-MpPreference -ExclusionPath "C:\Program Files\ViridianTweaks"
+Add-MpPreference -ExclusionPath "$env:LOCALAPPDATA\ViridianTweaks"
+Add-MpPreference -ExclusionProcess "ViridianTweaks.exe"</code></pre>
+        <p>If you use Bitdefender, Kaspersky, Avast, Norton, ESET, or another antivirus, add the same folders through that product's own UI.</p>
+      </article>
+
+      
+      <article class="issue-card featured" data-category="install runtime" data-keywords="white window white screen black window black screen aimutility tweaks macro empty window blank window nothing loads renders just white shows white only white empty ui not rendering webview2 not loading legacy ui localappdata viridiantweaks ui folder leftover stuck on white screen UI not visible app opens but nothing shows broken render aimutility blank tweaks blank">
+        <div class="issue-head">
+          <span class="issue-tag install">Install / Update</span>
+          <h2>App opens but the window is completely white (or black) — no UI loads</h2>
+          <p>You launch AimUtility, Tweaks or Macro and only see a blank white or black window, no buttons, no text. The most common cause: a leftover old UI folder in your Windows AppData is being preferred over the fresh install, or important files were removed by antivirus during installation.</p>
+        </div>
+        <div class="issue-grid">
+          <div>
+            <ol class="steps compact">
+              <li>Fully close the app (also check the system tray near the clock — right-click → Exit).</li>
+              <li>Uninstall the app via <b>Apps &amp; Features</b>.</li>
+              <li>Press <b>Win + R</b>, type <code>%LOCALAPPDATA%</code>, press Enter.</li>
+              <li>Find the folder <b>ViridianTweaks</b> (or anything starting with "Viridian") and <b>delete it completely</b>.</li>
+              <li>Also delete the leftover Program Files folder if it exists.</li>
+              <li><b>Turn off antivirus / Windows Defender real-time protection</b> before the next install — many AVs silently quarantine the WebView2 / UI files mid-install, which leaves you with a blank window.</li>
+              <li>Install <b>WebView2 Evergreen Runtime</b> and <b>Visual C++ x64</b> (download links below).</li>
+              <li>Reinstall the app from the official download page.</li>
+              <li>Right-click the app shortcut → <b>Run as administrator</b>.</li>
+            </ol>
+            <p class="mini-title">Folders to delete:</p>
+            <pre class="console path-console" data-title="Delete these if they exist"><button class="copy-btn" data-copy="%LOCALAPPDATA%\ViridianTweaks&#10;C:\Program Files\ViridianTweaks">Copy</button><code>%LOCALAPPDATA%\ViridianTweaks
+C:\Program Files\ViridianTweaks</code></pre>
+            <div class="download-row">
+              <a class="inline-download" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">Download WebView2</a>
+              <a class="inline-download" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Download Visual C++ x64</a>
+              <a class="inline-download ghost" href="https://download.viridiantweaks.com/download">Reinstall software</a>
+            </div>
+            <p class="support-note">If your antivirus was on during install, files needed for the UI may already be quarantined. Always disable AV before reinstalling, then add the install folder as an exclusion afterwards.</p>
+          </div>
+          <figure class="issue-image">
+            <img src="assets/image-white-window.png" alt="App opens with a completely white window">
+          </figure>
+        </div>
+      </article>
+
+      <article class="issue-card" data-category="install runtime" data-keywords="CreateProcess failed code 740 createprocess 740 requested operation requires elevation unable to execute file aimutility.exe needs admin run as administrator elevation required uac installer error setup error launch fail">
+        <div class="issue-head">
+          <span class="issue-tag install">Install / Update</span>
+          <h2>Setup error: <code>CreateProcess failed; code 740 — The requested operation requires elevation</code></h2>
+          <p>Windows refused to start the app because it needs administrator rights. This is harmless — just launch the installer (or the app) as administrator.</p>
+        </div>
+        <div class="issue-grid">
+          <div>
+            <ol class="steps compact">
+              <li>Close the error dialog (click OK).</li>
+              <li>Right-click the <b>installer .exe</b> (or the <b>Viridian app shortcut</b>) → <b>Run as administrator</b>.</li>
+              <li>If Windows asks for permission via UAC, click <b>Yes</b>.</li>
+              <li>If you started it from the Start Menu: press <b>Win</b>, type the app name, then right-click the result → <b>Run as administrator</b>.</li>
+            </ol>
+            <p>To make the app always launch as admin (so you don't have to remember every time): right-click the app shortcut → <b>Properties</b> → <b>Compatibility</b> tab → check <b>Run this program as an administrator</b> → OK.</p>
+          </div>
+          <figure class="issue-image">
+            <img src="assets/image-code-740.png" alt="CreateProcess failed code 740 elevation required error">
+          </figure>
+        </div>
+      </article>
+
+      <!-- data-keywords-marker-white-or-black-window -->
+
+      <!-- ===================== LICENSE / KEY ===================== -->
+
+      <article class="issue-card" data-category="license" data-keywords="key email spam not received license missing did not receive my key email never arrived">
+        <div class="issue-head">
+          <span class="issue-tag license">License</span>
+          <h2>Did not receive your key?</h2>
+          <p>Please check your spam folder and all email inbox tabs before creating a ticket.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="notice">
+      <div class="notice-icon">?</div>
+      <div>
+        <h2>Still stuck after trying the matching fix?</h2>
+        <p>Create a ticket with screenshots, your Windows version, your antivirus/security product, and the exact step where it fails.</p>
+        <a class="inline-download" href="https://discord.gg/optimize">Open Discord support</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Viridian Tweaks. All rights reserved.</div>
+      <div class="footer-status"><span class="footer-status-dot"></span> Known issues online</div>
+    </div>
+  </footer>
+
+<script src="assets/app.js?v=8"></script>
+</body>
+</html>
