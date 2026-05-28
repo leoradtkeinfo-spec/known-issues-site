@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=11">
+<link rel="stylesheet" href="assets/styles.css?v=12">
 </head>
 <body class="security-lock">
   <div class="bg-grid" aria-hidden="true"></div>
@@ -133,15 +133,34 @@
           <h2>Any Viridian site won't load (Download / Known Issues / Setup Guide / HWID Reset) — <code>ERR_CONNECTION_TIMED_OUT</code> / <code>ERR_CONNECTION_RESET</code></h2>
           <p>If any of our sites — download, known issues, setup guide, or HWID reset — show "Hmmm... can't reach this page", "took too long to respond" or "the connection was reset" in every browser, your ISP or local network can't reach Cloudflare (where all of our pages are hosted). The sites are up — this is local routing.</p>
         </div>
+        <!-- warp-recommended-step -->
+        <p class="mini-title" style="margin-top:14px;">Easiest fix (works for ~95% of users):</p>
+        <ol class="steps compact">
+          <li><b>Install Cloudflare WARP</b> — a free 1-click app that routes your traffic through Cloudflare so any blocked or broken connection is bypassed automatically. No account, no signup.
+            <ul>
+              <li>Direct download (Windows): <a href="https://1111-releases.cloudflareclient.com/win/latest" target="_blank" rel="noopener">https://1111-releases.cloudflareclient.com/win/latest</a></li>
+              <li>Run the installer (just click Next → Install → Finish)</li>
+              <li>When WARP opens, choose <b>"Privates Surfen" / "Private browsing"</b> on the left card → click <b>"Bedingungen akzeptieren &amp; fortfahren" / "Accept &amp; continue"</b></li>
+              <li>You'll see a big <b>"Verbinden" / "Connect"</b> button — click it. The cloud icon turns blue, status changes to <b>"Verbunden" / "Connected"</b>.</li>
+              <li>Now open the Viridian site again — it should load instantly.</li>
+            </ul>
+          </li>
+        </ol>
+        <p class="support-note" style="background:rgba(91,61,240,0.08);border-color:rgba(140,90,255,0.30);color:#c8c2da;">
+          <b>Does WARP affect your gaming ping?</b> For most people no, or only +5-10ms. If you notice it makes things worse in your game:
+          <b>just uninstall WARP after the download</b> (Apps &amp; Features → Cloudflare WARP → Uninstall). You only need it once — to get the file. The downloaded Viridian software itself does <b>not</b> depend on WARP.
+        </p>
+
+        <p class="mini-title" style="margin-top:18px;">If WARP didn't help — manual fallback steps:</p>
         <ol class="steps compact">
           <li><b>Flush DNS cache:</b> press <b>Win + R</b>, type <code>cmd</code>, run: <code>ipconfig /flushdns</code></li>
-          <li><b>Change DNS to Cloudflare (fixes ~95% of cases):</b> Win + R → <code>ncpa.cpl</code> → right-click your active connection → Properties → <b>Internet Protocol Version 4 (TCP/IPv4)</b> → Properties → "Use the following DNS server addresses":
+          <li><b>Change DNS to Cloudflare manually:</b> Win + R → <code>ncpa.cpl</code> → right-click your active connection → Properties → <b>Internet Protocol Version 4 (TCP/IPv4)</b> → Properties → "Use the following DNS server addresses":
             <ul><li>Preferred: <code>1.1.1.1</code></li><li>Alternate: <code>1.0.0.1</code></li></ul>
             Click OK, open a fresh browser, try the link again.</li>
-          <li>If still failing — try your <b>phone's mobile hotspot</b>. If it works there, your home ISP is the problem; keep Cloudflare DNS.</li>
-          <li>Last resort: any free VPN (ProtonVPN, Cloudflare WARP) connected to a US server.</li>
+          <li>Turn off your <b>antivirus web shield / HTTPS scanning</b> (Bitdefender, Norton, Kaspersky, Avast — all have a setting for this) and retry.</li>
+          <li>Test in an <b>incognito tab</b> (Ctrl+Shift+N) to rule out browser extensions like uBlock or AdGuard.</li>
+          <li>Try your <b>phone's mobile hotspot</b>. If it works there, your home ISP or router is the problem.</li>
         </ol>
-        <p class="support-note">Once the download is done, you can switch DNS back to "Obtain automatically" if your ping got worse. The DNS change only affects website lookups, not gameplay — but reverting it is fine.</p>
       </article>
 
       <article class="issue-card" data-category="connection" data-keywords="DNS_PROBE_FINISHED_NXDOMAIN nxdomain dns probe finished domain does not exist no se puede acceder a este sitio site does not exist check the spelling cant access download.viridiantweaks.com knownissues.viridiantweaks.com setupguide.viridiantweaks.com hwidreset.viridiantweaks.com download page known issues page setup guide hwid reset wont load any viridian site revisa que no haya errores propagation dns cache stale">
@@ -528,6 +547,6 @@ C:\Program Files\ViridianTweaks</code></pre>
     </div>
   </footer>
 
-<script src="assets/app.js?v=11"></script>
+<script src="assets/app.js?v=12"></script>
 </body>
 </html>
