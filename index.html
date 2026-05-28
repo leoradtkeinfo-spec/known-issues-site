@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=10">
+<link rel="stylesheet" href="assets/styles.css?v=11">
 </head>
 <body class="security-lock">
   <div class="bg-grid" aria-hidden="true"></div>
@@ -127,11 +127,11 @@
 
       <!-- ===================== CONNECTION / DOWNLOAD ===================== -->
 
-      <article class="issue-card" data-category="connection" data-keywords="ERR_CONNECTION_TIMED_OUT ERR_CONNECTION_RESET connection timed out connection was reset verbindung wurde zurueckgesetzt cant reach this page this site cant be reached download page wont load isp blocked cloudflare blocked download.viridiantweaks.com took too long to respond hmmm cant reach this page chrome edge firefox brave opera download website not loading proxy firewall antivirus web shield bitdefender norton kaspersky avast https inspection tcp rst">
+      <article class="issue-card" data-category="connection" data-keywords="ERR_CONNECTION_TIMED_OUT ERR_CONNECTION_RESET connection timed out connection was reset verbindung wurde zurueckgesetzt cant reach this page this site cant be reached download page wont load known issues page wont load setup guide wont load hwid reset wont load any viridian site wont load isp blocked cloudflare blocked download.viridiantweaks.com knownissues.viridiantweaks.com setupguide.viridiantweaks.com hwidreset.viridiantweaks.com took too long to respond hmmm cant reach this page chrome edge firefox brave opera site not loading proxy firewall antivirus web shield bitdefender norton kaspersky avast https inspection tcp rst">
         <div class="issue-head">
           <span class="issue-tag connection">Connection</span>
-          <h2>Download page won't load — <code>ERR_CONNECTION_TIMED_OUT</code> / <code>ERR_CONNECTION_RESET</code></h2>
-          <p>If the download page says "Hmmm... can't reach this page" or "took too long to respond" in every browser, your ISP or local network can't reach Cloudflare (where the page is hosted). The site is up — this is local routing.</p>
+          <h2>Any Viridian site won't load (Download / Known Issues / Setup Guide / HWID Reset) — <code>ERR_CONNECTION_TIMED_OUT</code> / <code>ERR_CONNECTION_RESET</code></h2>
+          <p>If any of our sites — download, known issues, setup guide, or HWID reset — show "Hmmm... can't reach this page", "took too long to respond" or "the connection was reset" in every browser, your ISP or local network can't reach Cloudflare (where all of our pages are hosted). The sites are up — this is local routing.</p>
         </div>
         <ol class="steps compact">
           <li><b>Flush DNS cache:</b> press <b>Win + R</b>, type <code>cmd</code>, run: <code>ipconfig /flushdns</code></li>
@@ -144,11 +144,11 @@
         <p class="support-note">Once the download is done, you can switch DNS back to "Obtain automatically" if your ping got worse. The DNS change only affects website lookups, not gameplay — but reverting it is fine.</p>
       </article>
 
-      <article class="issue-card" data-category="connection" data-keywords="DNS_PROBE_FINISHED_NXDOMAIN nxdomain dns probe finished domain does not exist no se puede acceder a este sitio site does not exist check the spelling cant access download.viridiantweaks.com revisa que no haya errores propagation dns cache stale">
+      <article class="issue-card" data-category="connection" data-keywords="DNS_PROBE_FINISHED_NXDOMAIN nxdomain dns probe finished domain does not exist no se puede acceder a este sitio site does not exist check the spelling cant access download.viridiantweaks.com knownissues.viridiantweaks.com setupguide.viridiantweaks.com hwidreset.viridiantweaks.com download page known issues page setup guide hwid reset wont load any viridian site revisa que no haya errores propagation dns cache stale">
         <div class="issue-head">
           <span class="issue-tag connection">Connection</span>
-          <h2>Download page says <code>DNS_PROBE_FINISHED_NXDOMAIN</code></h2>
-          <p>This means your DNS resolver cannot look up <code>download.viridiantweaks.com</code> — even though it exists and works worldwide. Most often it's a stale cache or slow ISP DNS server.</p>
+          <h2>Any Viridian site says <code>DNS_PROBE_FINISHED_NXDOMAIN</code></h2>
+          <p>This means your DNS resolver cannot look up our domain (download / known issues / setup guide / HWID reset) — even though it exists and works worldwide. Most often it's a stale DNS cache or a slow ISP resolver.</p>
         </div>
         <ol class="steps compact">
           <li>Press <b>Win + R</b>, type <code>cmd</code>, run: <code>ipconfig /flushdns</code></li>
@@ -528,6 +528,6 @@ C:\Program Files\ViridianTweaks</code></pre>
     </div>
   </footer>
 
-<script src="assets/app.js?v=10"></script>
+<script src="assets/app.js?v=11"></script>
 </body>
 </html>
