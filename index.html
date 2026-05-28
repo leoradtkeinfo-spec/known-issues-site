@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=12">
+<link rel="stylesheet" href="assets/styles.css?v=13">
 </head>
 <body class="security-lock">
   <div class="bg-grid" aria-hidden="true"></div>
@@ -137,18 +137,25 @@
         <p class="mini-title" style="margin-top:14px;">Easiest fix (works for ~95% of users):</p>
         <ol class="steps compact">
           <li><b>Install Cloudflare WARP</b> — a free 1-click app that routes your traffic through Cloudflare so any blocked or broken connection is bypassed automatically. No account, no signup.
-            <ul>
-              <li>Direct download (Windows): <a href="https://1111-releases.cloudflareclient.com/win/latest" target="_blank" rel="noopener">https://1111-releases.cloudflareclient.com/win/latest</a></li>
-              <li>Run the installer (just click Next → Install → Finish)</li>
-              <li>When WARP opens, choose <b>"Privates Surfen" / "Private browsing"</b> on the left card → click <b>"Bedingungen akzeptieren &amp; fortfahren" / "Accept &amp; continue"</b></li>
-              <li>You'll see a big <b>"Verbinden" / "Connect"</b> button — click it. The cloud icon turns blue, status changes to <b>"Verbunden" / "Connected"</b>.</li>
-              <li>Now open the Viridian site again — it should load instantly.</li>
-            </ul>
+            <div class="warp-download-row">
+              <a class="warp-download-btn" href="https://1111-releases.cloudflareclient.com/win/latest" target="_blank" rel="noopener">
+                <span class="warp-download-icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" width="16" height="16"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="warp-download-text">
+                  <b>Download Cloudflare WARP</b>
+                  <small>Direct installer for Windows</small>
+                </span>
+              </a>
+            </div>
           </li>
+          <li>Run the installer (just click Next → Install → Finish).</li>
+          <li>When WARP opens, choose <b>"Private browsing"</b> on the left card → click <b>"Accept &amp; continue"</b>.</li>
+          <li>You'll see a big <b>"Connect"</b> button — click it. The cloud icon turns blue and the status changes to <b>"Connected"</b>.</li>
+          <li>Open the Viridian site again — it should load instantly.</li>
         </ol>
         <p class="support-note" style="background:rgba(91,61,240,0.08);border-color:rgba(140,90,255,0.30);color:#c8c2da;">
-          <b>Does WARP affect your gaming ping?</b> For most people no, or only +5-10ms. If you notice it makes things worse in your game:
-          <b>just uninstall WARP after the download</b> (Apps &amp; Features → Cloudflare WARP → Uninstall). You only need it once — to get the file. The downloaded Viridian software itself does <b>not</b> depend on WARP.
+          <b>Does WARP affect your gaming ping?</b> For most people no, or only +5-10ms. After the download is done, just open the WARP app and click <b>"Disconnect"</b> — you're back on your normal internet instantly. If you don't want WARP installed at all, uninstall it (Apps &amp; Features → Cloudflare WARP → Uninstall). You only need it once — to get the file. The downloaded Viridian software itself does <b>not</b> depend on WARP.
         </p>
 
         <p class="mini-title" style="margin-top:18px;">If WARP didn't help — manual fallback steps:</p>
@@ -547,6 +554,6 @@ C:\Program Files\ViridianTweaks</code></pre>
     </div>
   </footer>
 
-<script src="assets/app.js?v=12"></script>
+<script src="assets/app.js?v=13"></script>
 </body>
 </html>

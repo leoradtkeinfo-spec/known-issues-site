@@ -637,3 +637,54 @@ code {
 }
 /* Legacy .tool-links block is no longer rendered, but if it shows hide it. */
 .tools .tool-links { display: none; }
+
+
+/* warp download button */
+.warp-download-row {
+  display: flex;
+  margin: 12px 0 4px;
+}
+.warp-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f6821f, #ff9d4a);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 10px 28px rgba(246,130,31,0.32), inset 0 1px 0 rgba(255,255,255,0.25);
+  transition: transform 0.12s, box-shadow 0.15s, filter 0.15s;
+}
+.warp-download-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(246,130,31,0.42), inset 0 1px 0 rgba(255,255,255,0.3);
+  filter: brightness(1.05);
+}
+.warp-download-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+}
+.warp-download-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.warp-download-text b {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.warp-download-text small {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  margin-top: 3px;
+}
