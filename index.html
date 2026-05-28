@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=9">
+<link rel="stylesheet" href="assets/styles.css?v=10">
 </head>
 <body class="security-lock">
   <div class="bg-grid" aria-hidden="true"></div>
@@ -90,7 +90,7 @@
       <div class="tools-row">
         <label class="search">
           <span>Search known issues</span>
-          <input id="issue-search" type="search" placeholder="Type any error code, symptom, or keyword â€” e.g. timestamp, code 740, white screen, NXDOMAIN, WebView2, antivirus" autocomplete="off">
+          <input id="issue-search" type="search" placeholder="Type any error code, symptom, or keyword — e.g. timestamp, code 740, white screen, NXDOMAIN, WebView2, antivirus" autocomplete="off">
           <span id="search-count" class="search-count"></span>
         </label>
         <div class="filter-chips" role="tablist" aria-label="Filter by category">
@@ -106,15 +106,15 @@
         <span class="quick-downloads-label">Quick downloads</span>
         <div class="quick-downloads-row">
           <a class="quick-link" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">
-            <span class="quick-link-icon" aria-hidden="true">â‡“</span>
+            <span class="quick-link-icon" aria-hidden="true">⇓</span>
             <span class="quick-link-text"><b>Visual C++ x64</b><small>Microsoft Runtime</small></span>
           </a>
           <a class="quick-link" href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">
-            <span class="quick-link-icon" aria-hidden="true">â‡“</span>
+            <span class="quick-link-icon" aria-hidden="true">⇓</span>
             <span class="quick-link-text"><b>WebView2 Runtime</b><small>Microsoft Evergreen</small></span>
           </a>
           <a class="quick-link" href="https://download.viridiantweaks.com/download">
-            <span class="quick-link-icon" aria-hidden="true">â†’</span>
+            <span class="quick-link-icon" aria-hidden="true">→</span>
             <span class="quick-link-text"><b>Software downloads</b><small>Official Viridian page</small></span>
           </a>
         </div>
@@ -127,34 +127,34 @@
 
       <!-- ===================== CONNECTION / DOWNLOAD ===================== -->
 
-      <article class="issue-card" data-category="connection" data-keywords="ERR_CONNECTION_TIMED_OUT connection timed out cant reach this page download page wont load isp blocked cloudflare blocked download.viridiantweaks.com took too long to respond hmmm cant reach this page chrome edge firefox brave opera download website not loading proxy firewall">
+      <article class="issue-card" data-category="connection" data-keywords="ERR_CONNECTION_TIMED_OUT ERR_CONNECTION_RESET connection timed out connection was reset verbindung wurde zurueckgesetzt cant reach this page this site cant be reached download page wont load isp blocked cloudflare blocked download.viridiantweaks.com took too long to respond hmmm cant reach this page chrome edge firefox brave opera download website not loading proxy firewall antivirus web shield bitdefender norton kaspersky avast https inspection tcp rst">
         <div class="issue-head">
           <span class="issue-tag connection">Connection</span>
-          <h2>Download page won't load â€” <code>ERR_CONNECTION_TIMED_OUT</code></h2>
-          <p>If the download page says "Hmmm... can't reach this page" or "took too long to respond" in every browser, your ISP or local network can't reach Cloudflare (where the page is hosted). The site is up â€” this is local routing.</p>
+          <h2>Download page won't load — <code>ERR_CONNECTION_TIMED_OUT</code> / <code>ERR_CONNECTION_RESET</code></h2>
+          <p>If the download page says "Hmmm... can't reach this page" or "took too long to respond" in every browser, your ISP or local network can't reach Cloudflare (where the page is hosted). The site is up — this is local routing.</p>
         </div>
         <ol class="steps compact">
           <li><b>Flush DNS cache:</b> press <b>Win + R</b>, type <code>cmd</code>, run: <code>ipconfig /flushdns</code></li>
-          <li><b>Change DNS to Cloudflare (fixes ~95% of cases):</b> Win + R â†’ <code>ncpa.cpl</code> â†’ right-click your active connection â†’ Properties â†’ <b>Internet Protocol Version 4 (TCP/IPv4)</b> â†’ Properties â†’ "Use the following DNS server addresses":
+          <li><b>Change DNS to Cloudflare (fixes ~95% of cases):</b> Win + R → <code>ncpa.cpl</code> → right-click your active connection → Properties → <b>Internet Protocol Version 4 (TCP/IPv4)</b> → Properties → "Use the following DNS server addresses":
             <ul><li>Preferred: <code>1.1.1.1</code></li><li>Alternate: <code>1.0.0.1</code></li></ul>
             Click OK, open a fresh browser, try the link again.</li>
-          <li>If still failing â€” try your <b>phone's mobile hotspot</b>. If it works there, your home ISP is the problem; keep Cloudflare DNS.</li>
+          <li>If still failing — try your <b>phone's mobile hotspot</b>. If it works there, your home ISP is the problem; keep Cloudflare DNS.</li>
           <li>Last resort: any free VPN (ProtonVPN, Cloudflare WARP) connected to a US server.</li>
         </ol>
-        <p class="support-note">Once the download is done, you can switch DNS back to "Obtain automatically" if your ping got worse. The DNS change only affects website lookups, not gameplay â€” but reverting it is fine.</p>
+        <p class="support-note">Once the download is done, you can switch DNS back to "Obtain automatically" if your ping got worse. The DNS change only affects website lookups, not gameplay — but reverting it is fine.</p>
       </article>
 
       <article class="issue-card" data-category="connection" data-keywords="DNS_PROBE_FINISHED_NXDOMAIN nxdomain dns probe finished domain does not exist no se puede acceder a este sitio site does not exist check the spelling cant access download.viridiantweaks.com revisa que no haya errores propagation dns cache stale">
         <div class="issue-head">
           <span class="issue-tag connection">Connection</span>
           <h2>Download page says <code>DNS_PROBE_FINISHED_NXDOMAIN</code></h2>
-          <p>This means your DNS resolver cannot look up <code>download.viridiantweaks.com</code> â€” even though it exists and works worldwide. Most often it's a stale cache or slow ISP DNS server.</p>
+          <p>This means your DNS resolver cannot look up <code>download.viridiantweaks.com</code> — even though it exists and works worldwide. Most often it's a stale cache or slow ISP DNS server.</p>
         </div>
         <ol class="steps compact">
           <li>Press <b>Win + R</b>, type <code>cmd</code>, run: <code>ipconfig /flushdns</code></li>
           <li>Restart your browser fully (close all windows).</li>
-          <li>Still failing? Change your DNS to <code>1.1.1.1</code> and <code>1.0.0.1</code> (Cloudflare) â€” see the steps in the "ERR_CONNECTION_TIMED_OUT" issue above.</li>
-          <li>Try again after a few minutes â€” sometimes it's a propagation delay that resolves itself.</li>
+          <li>Still failing? Change your DNS to <code>1.1.1.1</code> and <code>1.0.0.1</code> (Cloudflare) — see the steps in the "ERR_CONNECTION_TIMED_OUT" issue above.</li>
+          <li>Try again after a few minutes — sometimes it's a propagation delay that resolves itself.</li>
         </ol>
       </article>
 
@@ -164,7 +164,7 @@
         <div class="issue-head">
           <span class="issue-tag danger">License</span>
           <h2>"Your key got flagged due to suspicious activity"</h2>
-          <p>Your key was automatically flagged by our anti-sharing system. This is <b>not a permanent ban</b> â€” it just means our automated system saw something unusual and your key is under temporary review.</p>
+          <p>Your key was automatically flagged by our anti-sharing system. This is <b>not a permanent ban</b> — it just means our automated system saw something unusual and your key is under temporary review.</p>
         </div>
         <p class="mini-title">What happens now:</p>
         <ol class="steps compact">
@@ -178,8 +178,8 @@
           <li>If after <b>3 full days</b> your key is still blocked and you have not heard anything from us, <i>then</i> open a Discord ticket with your key and Discord ID.</li>
         </ol>
         <p class="support-note" style="border-left:3px solid #ff5a5a;padding-left:12px;background:rgba(255,90,90,0.06);">
-          <b>VERY IMPORTANT â€” please do NOT open a ticket before 3 days have passed.</b><br>
-          Opening a ticket immediately after a flag will get you <b>timed out / muted in our Discord</b>. We already know about your flagged key the second it happens â€” duplicate tickets just slow our team down for everyone else. Wait the 3 days first.
+          <b>VERY IMPORTANT — please do NOT open a ticket before 3 days have passed.</b><br>
+          Opening a ticket immediately after a flag will get you <b>timed out / muted in our Discord</b>. We already know about your flagged key the second it happens — duplicate tickets just slow our team down for everyone else. Wait the 3 days first.
         </p>
       </article>
 
@@ -189,7 +189,7 @@
         <div class="issue-head">
           <span class="issue-tag connection">Download</span>
           <h2>"Download session expired" on the download page</h2>
-          <p>Your download session timed out because too much time passed between entering your license key, connecting Discord, and clicking download. It is harmless â€” you just need to start the flow once more.</p>
+          <p>Your download session timed out because too much time passed between entering your license key, connecting Discord, and clicking download. It is harmless — you just need to start the flow once more.</p>
         </div>
         <div class="issue-grid">
           <div>
@@ -197,9 +197,9 @@
               <li>Go back to <a href="https://download.viridiantweaks.com/download">download.viridiantweaks.com/download</a> in your browser (open a fresh tab).</li>
               <li>Enter your <b>license key</b> again.</li>
               <li>Click <b>Connect Discord</b> and finish the Discord login.</li>
-              <li>Click <b>Download</b> â€” your session is fresh again and the file will start downloading.</li>
+              <li>Click <b>Download</b> — your session is fresh again and the file will start downloading.</li>
             </ol>
-            <p class="support-note">Tip: try not to wait too long between the steps. If you get interrupted (phone, AFK, etc.) just restart the flow â€” sessions are short on purpose so old links can not be reused by someone else.</p>
+            <p class="support-note">Tip: try not to wait too long between the steps. If you get interrupted (phone, AFK, etc.) just restart the flow — sessions are short on purpose so old links can not be reused by someone else.</p>
           </div>
           <figure class="issue-image">
             <img src="assets/image-session-expired.png" alt="Download session expired error">
@@ -218,10 +218,10 @@
           <p>If after an update your version in the bottom-right corner still shows the old number (e.g. 1.0.33), the installer was unable to overwrite the running files. Fixed in 1.0.37+. If you're below 1.0.37, you'll need one manual reinstall to get the fix.</p>
         </div>
         <ol class="steps compact">
-          <li>Fully close the Macro (also check system tray near the clock â€” right-click â†’ Exit).</li>
+          <li>Fully close the Macro (also check system tray near the clock — right-click → Exit).</li>
           <li>Open <b>Apps &amp; Features</b> in Windows, find <b>Viridian Macro</b>, click <b>Uninstall</b>.</li>
           <li>Download the latest installer from the official download page.</li>
-          <li>Install â€” version should now show <code>1.0.37</code> or higher.</li>
+          <li>Install — version should now show <code>1.0.37</code> or higher.</li>
           <li>After this one-time reinstall, every future update will install automatically.</li>
         </ol>
         <div class="download-row">
@@ -234,16 +234,16 @@
         <div class="issue-head">
           <span class="issue-tag install">Install / Update</span>
           <h2>Tweaks stuck on V1.0.0 even after reinstall</h2>
-          <p>The app finds an old leftover UI folder in your Windows AppData and loads it instead of the freshly installed one. Resetting your PC does <b>not</b> help unless you chose "Remove everything" â€” "Keep my files" leaves AppData intact.</p>
+          <p>The app finds an old leftover UI folder in your Windows AppData and loads it instead of the freshly installed one. Resetting your PC does <b>not</b> help unless you chose "Remove everything" — "Keep my files" leaves AppData intact.</p>
         </div>
         <ol class="steps compact">
           <li>Make sure Viridian Tweaks is fully closed (also check the system tray).</li>
           <li>Press <b>Win + R</b>, type <code>%LOCALAPPDATA%</code>, press Enter.</li>
           <li>Find the folder called <b>ViridianTweaks</b> and <b>delete it completely</b>.</li>
-          <li>Reinstall from the official download page â€” the latest version will now load.</li>
+          <li>Reinstall from the official download page — the latest version will now load.</li>
         </ol>
         <pre class="console path-console" data-title="Folder to delete"><button class="copy-btn" data-copy="%LOCALAPPDATA%\ViridianTweaks">Copy</button><code>%LOCALAPPDATA%\ViridianTweaks</code></pre>
-        <p class="support-note">That folder is the <b>only</b> place the app stores its data â€” nowhere else on your system. So a Windows reset only fixes this if you wiped AppData too.</p>
+        <p class="support-note">That folder is the <b>only</b> place the app stores its data — nowhere else on your system. So a Windows reset only fixes this if you wiped AppData too.</p>
       </article>
 
       <article class="issue-card featured" data-category="install security" data-keywords="error code 2 antivirus defender missing files viridiantweaks localappdata after install blocked files app wont start install failed">
@@ -314,9 +314,9 @@ w32tm /resync /force</code></pre>
         </div>
         <ol class="steps compact">
           <li>Download <b>Visual C++ Redistributable x64</b> (the button below).</li>
-          <li>Run <code>vc_redist.x64.exe</code> â†’ click <b>Install</b>.</li>
+          <li>Run <code>vc_redist.x64.exe</code> → click <b>Install</b>.</li>
           <li>Restart your PC if Windows asks.</li>
-          <li>Launch the Viridian app again â€” the dll error is gone.</li>
+          <li>Launch the Viridian app again — the dll error is gone.</li>
         </ol>
         <div class="download-row">
           <a class="inline-download" href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Download Visual C++ x64</a>
@@ -385,19 +385,19 @@ w32tm /resync /force</code></pre>
         <div class="issue-head">
           <span class="issue-tag danger">Security tools</span>
           <h2>Browser / Windows says "Malicious Download Detected" or "Download Cancelled"</h2>
-          <p>This is a known <b>false positive</b> on unsigned Windows software and happens to almost every new indie tool â€” including ours. The download is safe.</p>
+          <p>This is a known <b>false positive</b> on unsigned Windows software and happens to almost every new indie tool — including ours. The download is safe.</p>
         </div>
         <div class="issue-grid">
           <div>
-            <p>Why this happens: Our installer is <b>not yet code-signed</b> with an expensive Microsoft EV certificate, so browsers and Windows Defender treat any new unsigned executable as suspicious until thousands of users have downloaded it. The file itself is the exact installer we host â€” and we've been trusted by <b>over 2,000 active community members</b> using it daily.</p>
+            <p>Why this happens: Our installer is <b>not yet code-signed</b> with an expensive Microsoft EV certificate, so browsers and Windows Defender treat any new unsigned executable as suspicious until thousands of users have downloaded it. The file itself is the exact installer we host — and we've been trusted by <b>over 2,000 active community members</b> using it daily.</p>
             <p class="mini-title">Quick fix:</p>
             <ol class="steps compact">
               <li>In your browser's download bar, click <b>"Keep"</b> / <b>"Keep anyway"</b> / <b>"Download anyway"</b>. On Chrome/Edge it may be hidden behind a <b>"..."</b> menu next to the warning.</li>
-              <li>If Windows SmartScreen blocks the installer when you open it, click <b>"More info"</b> â†’ <b>"Run anyway"</b>.</li>
+              <li>If Windows SmartScreen blocks the installer when you open it, click <b>"More info"</b> → <b>"Run anyway"</b>.</li>
               <li>If your antivirus quarantines it, restore the file from quarantine and add the install folder as an exclusion before running it.</li>
               <li>Only ever download from the official page: <a href="https://download.viridiantweaks.com/download">download.viridiantweaks.com/download</a></li>
             </ol>
-            <p class="support-note">If you're not comfortable doing this, that's totally fair â€” you can also scan the file on <a href="https://www.virustotal.com/">VirusTotal</a> first. Most flags you'll see are heuristic / "generic" detections that AV vendors apply to every unsigned installer until enough users vouch for it.</p>
+            <p class="support-note">If you're not comfortable doing this, that's totally fair — you can also scan the file on <a href="https://www.virustotal.com/">VirusTotal</a> first. Most flags you'll see are heuristic / "generic" detections that AV vendors apply to every unsigned installer until enough users vouch for it.</p>
           </div>
           <figure class="issue-image">
             <img src="assets/image-malicious-download.png" alt="Malicious Download Detected browser warning">
@@ -443,21 +443,21 @@ Add-MpPreference -ExclusionProcess "ViridianTweaks.exe"</code></pre>
       <article class="issue-card featured" data-category="install runtime" data-keywords="white window white screen black window black screen aimutility tweaks macro empty window blank window nothing loads renders just white shows white only white empty ui not rendering webview2 not loading legacy ui localappdata viridiantweaks ui folder leftover stuck on white screen UI not visible app opens but nothing shows broken render aimutility blank tweaks blank">
         <div class="issue-head">
           <span class="issue-tag install">Install / Update</span>
-          <h2>App opens but the window is completely white (or black) â€” no UI loads</h2>
+          <h2>App opens but the window is completely white (or black) — no UI loads</h2>
           <p>You launch AimUtility, Tweaks or Macro and only see a blank white or black window, no buttons, no text. The most common cause: a leftover old UI folder in your Windows AppData is being preferred over the fresh install, or important files were removed by antivirus during installation.</p>
         </div>
         <div class="issue-grid">
           <div>
             <ol class="steps compact">
-              <li>Fully close the app (also check the system tray near the clock â€” right-click â†’ Exit).</li>
+              <li>Fully close the app (also check the system tray near the clock — right-click → Exit).</li>
               <li>Uninstall the app via <b>Apps &amp; Features</b>.</li>
               <li>Press <b>Win + R</b>, type <code>%LOCALAPPDATA%</code>, press Enter.</li>
               <li>Find the folder <b>ViridianTweaks</b> (or anything starting with "Viridian") and <b>delete it completely</b>.</li>
               <li>Also delete the leftover Program Files folder if it exists.</li>
-              <li><b>Turn off antivirus / Windows Defender real-time protection</b> before the next install â€” many AVs silently quarantine the WebView2 / UI files mid-install, which leaves you with a blank window.</li>
+              <li><b>Turn off antivirus / Windows Defender real-time protection</b> before the next install — many AVs silently quarantine the WebView2 / UI files mid-install, which leaves you with a blank window.</li>
               <li>Install <b>WebView2 Evergreen Runtime</b> and <b>Visual C++ x64</b> (download links below).</li>
               <li>Reinstall the app from the official download page.</li>
-              <li>Right-click the app shortcut â†’ <b>Run as administrator</b>.</li>
+              <li>Right-click the app shortcut → <b>Run as administrator</b>.</li>
             </ol>
             <p class="mini-title">Folders to delete:</p>
             <pre class="console path-console" data-title="Delete these if they exist"><button class="copy-btn" data-copy="%LOCALAPPDATA%\ViridianTweaks&#10;C:\Program Files\ViridianTweaks">Copy</button><code>%LOCALAPPDATA%\ViridianTweaks
@@ -478,18 +478,18 @@ C:\Program Files\ViridianTweaks</code></pre>
       <article class="issue-card" data-category="install runtime" data-keywords="CreateProcess failed code 740 createprocess 740 requested operation requires elevation unable to execute file aimutility.exe needs admin run as administrator elevation required uac installer error setup error launch fail">
         <div class="issue-head">
           <span class="issue-tag install">Install / Update</span>
-          <h2>Setup error: <code>CreateProcess failed; code 740 â€” The requested operation requires elevation</code></h2>
-          <p>Windows refused to start the app because it needs administrator rights. This is harmless â€” just launch the installer (or the app) as administrator.</p>
+          <h2>Setup error: <code>CreateProcess failed; code 740 — The requested operation requires elevation</code></h2>
+          <p>Windows refused to start the app because it needs administrator rights. This is harmless — just launch the installer (or the app) as administrator.</p>
         </div>
         <div class="issue-grid">
           <div>
             <ol class="steps compact">
               <li>Close the error dialog (click OK).</li>
-              <li>Right-click the <b>installer .exe</b> (or the <b>Viridian app shortcut</b>) â†’ <b>Run as administrator</b>.</li>
+              <li>Right-click the <b>installer .exe</b> (or the <b>Viridian app shortcut</b>) → <b>Run as administrator</b>.</li>
               <li>If Windows asks for permission via UAC, click <b>Yes</b>.</li>
-              <li>If you started it from the Start Menu: press <b>Win</b>, type the app name, then right-click the result â†’ <b>Run as administrator</b>.</li>
+              <li>If you started it from the Start Menu: press <b>Win</b>, type the app name, then right-click the result → <b>Run as administrator</b>.</li>
             </ol>
-            <p>To make the app always launch as admin (so you don't have to remember every time): right-click the app shortcut â†’ <b>Properties</b> â†’ <b>Compatibility</b> tab â†’ check <b>Run this program as an administrator</b> â†’ OK.</p>
+            <p>To make the app always launch as admin (so you don't have to remember every time): right-click the app shortcut → <b>Properties</b> → <b>Compatibility</b> tab → check <b>Run this program as an administrator</b> → OK.</p>
           </div>
           <figure class="issue-image">
             <img src="assets/image-code-740.png" alt="CreateProcess failed code 740 elevation required error">
@@ -528,6 +528,6 @@ C:\Program Files\ViridianTweaks</code></pre>
     </div>
   </footer>
 
-<script src="assets/app.js?v=9"></script>
+<script src="assets/app.js?v=10"></script>
 </body>
 </html>
