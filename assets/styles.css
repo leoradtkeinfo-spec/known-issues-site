@@ -252,6 +252,8 @@ b { color: #fff; font-weight: 700; }
     margin: 22px 0;
 }
 .notice-red { border-color: rgba(239,68,68,0.34); background: linear-gradient(180deg, rgba(55,18,18,0.64), rgba(16,16,18,0.95)); }
+.notice-blue { border-color: rgba(56,140,255,0.34); background: linear-gradient(180deg, rgba(16,30,55,0.64), rgba(16,16,18,0.95)); }
+.notice-blue .notice-icon { color: #5aa9ff; }
 .notice-icon {
     width: 44px;
     height: 44px;

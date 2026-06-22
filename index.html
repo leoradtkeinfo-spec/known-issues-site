@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=13">
+<link rel="stylesheet" href="assets/styles.css?v=14">
 </head>
 <body class="security-lock">
   <div class="bg-grid" aria-hidden="true"></div>
@@ -126,6 +126,19 @@
     <section class="issues" id="issues">
 
       <!-- ===================== CONNECTION / DOWNLOAD ===================== -->
+
+      <div class="notice notice-blue connection-highlight" data-category="connection">
+        <div class="notice-icon">i</div>
+        <div>
+          <h2>Site won't load? This is a network/ISP issue — not your PC</h2>
+          <p>
+            The errors below (<code>ERR_CONNECTION_TIMED_OUT</code>, <code>ERR_CONNECTION_RESET</code>, <code>DNS_PROBE_FINISHED_NXDOMAIN</code>)
+            mean your <b>ISP, DNS resolver, or local network</b> can't reach our pages — the sites themselves are online and work worldwide.
+            This is the one category we <b>can't fix from our side</b>, but the fix on your end is quick:
+            <b>install Cloudflare WARP</b> (1 click) or switch your DNS to <code>1.1.1.1</code>. Full steps are in the two cards right below.
+          </p>
+        </div>
+      </div>
 
       <article class="issue-card" data-category="connection" data-keywords="ERR_CONNECTION_TIMED_OUT ERR_CONNECTION_RESET connection timed out connection was reset verbindung wurde zurueckgesetzt cant reach this page this site cant be reached download page wont load known issues page wont load setup guide wont load hwid reset wont load any viridian site wont load isp blocked cloudflare blocked download.viridiantweaks.com knownissues.viridiantweaks.com setupguide.viridiantweaks.com hwidreset.viridiantweaks.com took too long to respond hmmm cant reach this page chrome edge firefox brave opera site not loading proxy firewall antivirus web shield bitdefender norton kaspersky avast https inspection tcp rst">
         <div class="issue-head">
